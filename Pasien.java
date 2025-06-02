@@ -7,7 +7,7 @@ public class Pasien {
         this.nik=nik;
         this.keluhan= keluhan;
     }
-    public tampilkanInformasi(){
+    public void tampilkanInformasi(){
         System.out.println("Nama Pasien : " + nama);
         System.out.println("NIK: " + nik);
         System.out.println("Keluhan : " + keluhan);

@@ -1,5 +1,3 @@
-package CaseMethod;
-
 public class QueuePasien {
     private Pasien[] antrian;
     private int front, rear, size, kapasitas;
@@ -26,7 +24,7 @@ public class QueuePasien {
             antrian[rear] = p;
             size++;
         } else {
-            System.out.println("Antrian penuh!");
+            System.out.println(">> Antrian penuh! Tidak bisa menambahkan pasien.");
         }
     }
 
@@ -37,24 +35,27 @@ public class QueuePasien {
             size--;
             return p;
         } else {
-            System.out.println("Antrian Kosong!");
+            System.out.println(">> Antrian kosong!");
             return null;
         }
     }
 
     public void tampilkanAntrian() {
         if (isEmpty()) {
-            System.out.println("Tidak ada pasien dalam antrian.");
+            System.out.println(">> Tidak ada pasien dalam antrian.");
             return;
         }
-        System.out.println("Daftar Pasien dalam Antrian:");
+        System.out.println("-- Antrian Pasien --");
+        System.out.println("Antrian Pasien:");
         for (int i = 0; i < size; i++) {
             int idx = (front + i) % kapasitas;
-            System.out.println((i + 1) + ". " + antrian[idx].namaPasien + " - " + antrian[idx].nik);
+            Pasien pasien = antrian[idx];
+            pasien.tampilkanInformasi();
+            System.out.println();
         }
     }
 
-    public int sisaAntrian() {
+    public int getSize() {
         return size;
     }
 }

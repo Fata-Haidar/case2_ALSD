@@ -1,17 +1,17 @@
-package CaseMethod;
-
 public class TransaksiLayanan {
-    String nik, namaPasien;
-    String idDokter, namaDokter;
-    int durasiJam;
-    int biaya;
-    
-    TransaksiLayanan(String nik, String namaPasien, String idDokter, int durasiJam, int biaya) {
-        this.nik = nik;
-        this.namaPasien = namaPasien;
-        this.idDokter = idDokter;
-        this.namaDokter = namaDokter;
-        this.durasiJam = durasiJam;
-        this.biaya = durasiJam * 50000;
+
+    Pasien pasien;
+    Dokter dokter;
+    int durasiLayanan,biaya;
+
+    public TransaksiLayanan(Pasien pasien, Dokter dokter, int durasi){
+        this.pasien=pasien;
+        this.dokter=dokter;
+        this.durasiLayanan=durasi;
+        this.biaya=hitungBiaya();
+    }
+    public int hitungBiaya() {
+        biaya = durasiLayanan * 50000;
+        return biaya;
     }
 }
