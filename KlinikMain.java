@@ -35,10 +35,10 @@ public class KlinikMain {
                     System.out.print("Masukkan NIK Pasien : ");
                     String nik = sc.nextLine();
                     System.out.print("Nasukkan Nama Pasien : ");
-                    String namaPasien = sc.nextLine();
+                    String nama = sc.nextLine();
                     System.out.print("Masukkan Keluhan Pasien : ");
                     String keluhan = sc.nextLine();
-                    antrian.enqueue(new Pasien(namaPasien, nik, keluhan));
+                    antrian.enqueue(new Pasien(nama, nik, keluhan));
                     System.out.println("Pasien berhasil ditambahkan ke antrian.");
                     break;
 
