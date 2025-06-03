@@ -49,8 +49,7 @@ public class QueuePasien {
         for (int i = 0; i < size; i++) {
             System.out.println("Pasien ke-" + (i+1));
             int idx = (front + i) % kapasitas;
-            Pasien pasien = antrian[idx];
-            pasien.tampilkanInformasi();
+            antrian[idx].tampilkanInformasi();
             System.out.println();
         }
     }
