@@ -38,4 +38,14 @@ public class LinkedListTransaksi {
         return size == 0;
     }
     
+    public void tampilkaRiwayat(){
+        if (isEmpty()) {
+            System.out.println("Belum ada transaksi");
+        
+        }
+        for (int i = 0; i < getSize(); i++) {
+            TransaksiLayanan t = get(i);
+            System.out.println((i+1) + ". "+ t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
+        }
+    }
 }
