@@ -76,7 +76,7 @@ public class KlinikMain {
                 case 5:
                     for (int i = 0; i < riwayat.getSize(); i++) {
                     TransaksiLayanan t = riwayat.get(i);
-                    System.out.println(t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
+                    System.out.println((i+1) + ". "+ t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
                     }
                     break;
                 case 0:
