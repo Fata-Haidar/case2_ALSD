@@ -1,6 +1,6 @@
 public class LinkedListTransaksi {
-    private Node head;
-    private int size = 0;
+    Node head;
+    int size = 0;
 
     public void add(TransaksiLayanan data) {
         Node newNode = new Node(data);

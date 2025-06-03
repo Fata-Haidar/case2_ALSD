@@ -1,6 +1,6 @@
 public class QueuePasien {
-    private Pasien[] antrian;
-    private int front, rear, size, kapasitas;
+    Pasien[] antrian;
+    int front, rear, size, kapasitas;
 
     public QueuePasien(int kapasitas) {
         this.kapasitas = kapasitas;

@@ -10,6 +10,7 @@ public class TransaksiLayanan {
         this.durasiLayanan=durasi;
         this.biaya=hitungBiaya();
     }
+    
     public int hitungBiaya() {
         biaya = durasiLayanan * 50000;
         return biaya;
