@@ -74,6 +74,10 @@ public class KlinikMain {
                     System.out.println(">> Sisa antrian: " + antrian.getSize());
                     break;
                 case 5:
+                    if (riwayat.isEmpty()) {
+                        System.out.println("Belum ada transaksi");
+                        break;
+                    }
                     for (int i = 0; i < riwayat.getSize(); i++) {
                     TransaksiLayanan t = riwayat.get(i);
                     System.out.println((i+1) + ". "+ t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
