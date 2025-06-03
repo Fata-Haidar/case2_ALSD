@@ -31,6 +31,10 @@ public class KlinikMain {
 
             switch (pilihan) {
                 case 1:
+                if (antrian.isFull()) {
+                    System.out.println(">> Antrian Penuh.");
+                    return;
+                    }
                     System.out.print("Masukkan NIK Pasien : ");
                     String nik = sc.nextLine();
                     System.out.print("Nasukkan Nama Pasien : ");
