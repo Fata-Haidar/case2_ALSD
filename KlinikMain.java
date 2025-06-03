@@ -5,7 +5,7 @@ public class KlinikMain {
 
 
     public static void main(String[] args) {
-        QueuePasien antrian = new QueuePasien(3);
+        QueuePasien antrian = new QueuePasien(10);
         LinkedListTransaksi riwayat = new LinkedListTransaksi();
         Scanner sc = new Scanner(System.in);
         System.out.println("+-----------------------------------------+");
@@ -31,6 +31,10 @@ public class KlinikMain {
 
             switch (pilihan) {
                 case 1:
+                if(antrian.isFull()){
+                    System.out.println(">> Antrian penuh! Tidak bisa menambahkan pasien.");
+                    break;
+                }
                     System.out.print("Masukkan NIK Pasien : ");
                     String nik = sc.nextLine();
                     System.out.print("Nasukkan Nama Pasien : ");
@@ -44,6 +48,10 @@ public class KlinikMain {
                     antrian.tampilkanAntrian();
                     break;
                 case 3:
+                if(antrian.isEmpty()){
+                    System.out.println(">> Antrian kosong!");
+                    break;
+                }
                     Pasien pasien = antrian.dequeue();
                     System.out.println("Melayani pasien: " + pasien.nama);
 
