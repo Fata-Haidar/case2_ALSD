@@ -23,9 +23,7 @@ public class QueuePasien {
             rear = (rear + 1) % kapasitas;
             antrian[rear] = p;
             size++;
-        } else {
-            System.out.println(">> Antrian penuh! Tidak bisa menambahkan pasien.");
-        }
+        } 
     }
 
     public Pasien dequeue() {
@@ -34,9 +32,7 @@ public class QueuePasien {
             front = (front + 1) % kapasitas;
             size--;
             return p;
-        } else {
-            System.out.println(">> Antrian kosong!");
-            return null;
+        } 
         }
     }
 
